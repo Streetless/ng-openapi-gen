@@ -389,6 +389,33 @@
           }
         }
       }
+    },
+    "/path7": {
+      "delete": {
+        "operationId": "delete",
+        "summary": "Test a reserved keyword",
+        "responses": {
+          "204": {}
+        }
+      }
+    },
+    "/duplicated1": {
+      "get": {
+        "operationId": "duplicated",
+        "summary": "Test a duplicated operationId",
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/duplicated2": {
+      "get": {
+        "operationId": "duplicated",
+        "summary": "Test a duplicated operationId",
+        "responses": {
+          "200": {}
+        }
+      }
     }
   },
   "components": {
@@ -442,7 +469,7 @@
       "RefResp": {
         "description": "I am a response",
         "content": {
-          "application/json": {
+          "application/vnd.my-custom-type+json;version=2": {
             "schema": {
               "type": "object"
             }
